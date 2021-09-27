@@ -176,6 +176,30 @@ Model/DosColores.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/DosColores.cpp.s
 .PHONY : Model/DosColores.cpp.s
 
+Model/Genshin.obj: Model/Genshin.cpp.obj
+.PHONY : Model/Genshin.obj
+
+# target to build an object file
+Model/Genshin.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/Genshin.cpp.obj
+.PHONY : Model/Genshin.cpp.obj
+
+Model/Genshin.i: Model/Genshin.cpp.i
+.PHONY : Model/Genshin.i
+
+# target to preprocess a source file
+Model/Genshin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/Genshin.cpp.i
+.PHONY : Model/Genshin.cpp.i
+
+Model/Genshin.s: Model/Genshin.cpp.s
+.PHONY : Model/Genshin.s
+
+# target to generate assembly for a file
+Model/Genshin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/Genshin.cpp.s
+.PHONY : Model/Genshin.cpp.s
+
 Model/Juego.obj: Model/Juego.cpp.obj
 .PHONY : Model/Juego.obj
 
@@ -311,6 +335,9 @@ help:
 	@echo ... Model/DosColores.obj
 	@echo ... Model/DosColores.i
 	@echo ... Model/DosColores.s
+	@echo ... Model/Genshin.obj
+	@echo ... Model/Genshin.i
+	@echo ... Model/Genshin.s
 	@echo ... Model/Juego.obj
 	@echo ... Model/Juego.i
 	@echo ... Model/Juego.s

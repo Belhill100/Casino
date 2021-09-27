@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/casino.dir/Model/Casino.cpp.obj"
   "CMakeFiles/casino.dir/Model/DosColores.cpp.obj"
+  "CMakeFiles/casino.dir/Model/Genshin.cpp.obj"
   "CMakeFiles/casino.dir/Model/Juego.cpp.obj"
   "CMakeFiles/casino.dir/Model/Jugador.cpp.obj"
   "CMakeFiles/casino.dir/Model/Mayor13.cpp.obj"

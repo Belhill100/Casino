@@ -1,6 +1,3 @@
-//
-// Created by lufe0 on 8/05/2021.
-//
 
 #ifndef CASINO_DOSCOLORES_H
 #define CASINO_DOSCOLORES_H

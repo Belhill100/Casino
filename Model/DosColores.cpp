@@ -1,7 +1,3 @@
-//
-// Created by lufe0 on 8/05/2021.
-//
-
 #include "DosColores.h"
 
 float DosColores::jugar(float gonzosApostar) {

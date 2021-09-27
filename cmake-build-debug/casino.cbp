@@ -92,6 +92,12 @@
 		<Unit filename="C:/Users/ecoll/OneDrive/Escritorio/Tercer Semestre/Programacion Orientada a Objetos/Casino/Model/DosColores.h">
 			<Option target="casino"/>
 		</Unit>
+		<Unit filename="C:/Users/ecoll/OneDrive/Escritorio/Tercer Semestre/Programacion Orientada a Objetos/Casino/Model/Genshin.cpp">
+			<Option target="casino"/>
+		</Unit>
+		<Unit filename="C:/Users/ecoll/OneDrive/Escritorio/Tercer Semestre/Programacion Orientada a Objetos/Casino/Model/Genshin.h">
+			<Option target="casino"/>
+		</Unit>
 		<Unit filename="C:/Users/ecoll/OneDrive/Escritorio/Tercer Semestre/Programacion Orientada a Objetos/Casino/Model/Juego.cpp">
 			<Option target="casino"/>
 		</Unit>
