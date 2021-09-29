@@ -12,6 +12,7 @@
 #include "Juego.h"
 #include "Mayor13.h"
 #include "DosColores.h"
+#include "Genshin.h"
 
 
 using std::cin;

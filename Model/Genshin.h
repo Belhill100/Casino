@@ -4,12 +4,12 @@
 #include "Juego.h"
 #include <ctime>
 
-class Genshin:public Juego{
+class Genshin : public Juego{
 protected:
     float calcularResultado(float gonzosApostar) override;
 public:
-    float jugar(float gonzosApostar) override;
     virtual ~Genshin();
+    float jugar(float gonzosApostar) override;
 };
 
 #endif //CASINO_GENSHIN_H

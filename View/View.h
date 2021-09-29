@@ -1,8 +1,3 @@
-//
-// Created by lufe0 on 7/05/2021.
-//  Updated: Sept 22 - 2021
-//
-
 #ifndef CASINO_VIEW_H
 #define CASINO_VIEW_H
 #include "../Model/Casino.h"

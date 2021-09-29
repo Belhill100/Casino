@@ -4,21 +4,24 @@
 // Constructor que inicializa las ganancias y perdidas en cero
 Casino::Casino() {
     cout << "Inicialice casino";
-    // Inicia un jugador en el mapa para comenzar
     jugadoresMap.insert({1,new Jugador(1,"Pedro rodriguez", 500)});
 
-    // Inicia  los juegos disponibles y los agrega al mapa de juegos
+    // Inicia los juegos disponibles y los agrega al mapa de juegos
     Mayor13 * juego1 = new Mayor13();
     juegosDisponibles.push_back(juego1);
     DosColores * juego2 = new DosColores();
     juegosDisponibles.push_back(juego2);
-
-    // Agregar aqui los demas juegos
+    Genshin * juego3 = new Genshin();
+    juegosDisponibles.push_back(juego3);
 }
 
 void Casino::agregarJugador(long id, string nombreJugador, double dinero) {
+    float cantidadGonzos;
     // Se agrega jugador solo si no existe con anticipacion
+    if (!verExisteJugador(id)){
+        cantidadGonzos = convertirPesosAGonzos(dinero);
 
+    }
     // Se convierte el dinero a Gonzos
 
     // Se agrega el jugador al mapa de jugadores del casino
@@ -67,8 +70,12 @@ void Casino::recargarGonzos(long idJugador) {
 
 
 bool Casino::verExisteJugador(long id) {
-
-    throw std::logic_error("Metodo por implementar");
+    for (map<long, Jugador*>::iterator jugador = jugadoresMap.begin(); jugador != jugadoresMap.end(); jugador++){
+        if (jugador->first == id){
+            return true;
+        }
+    }
+    return false;
 }
 
 double Casino::convertirPesosAGonzos(double dinero) {
