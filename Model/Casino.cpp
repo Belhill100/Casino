@@ -20,20 +20,21 @@ void Casino::agregarJugador(long id, string nombreJugador, double dinero) {
     // Se agrega jugador solo si no existe con anticipacion
     if (!verExisteJugador(id)){
         cantidadGonzos = convertirPesosAGonzos(dinero);
+        Jugador * pJugador = new Jugador (id, nombreJugador, cantidadGonzos);
+        jugadoresMap.insert({pJugador->getId(), pJugador});
 
     }
-    // Se convierte el dinero a Gonzos
-
-    // Se agrega el jugador al mapa de jugadores del casino
-    // Se lanza una excepcion de tipo domain-error si el usuario con ese id ya existe
-    throw std::logic_error("Metodo por implementar");
+    else{
+        throw std::domain_error("La identificacion ya existe\n");
+    }
 }
 
 bool Casino::jugar(int idJuego, long idJugador, float gonzosApostar) {
+    int posJuego;
+    float gonzosGanados;
     if (gonzosApostar < 1 ){
         throw std::domain_error("Debe apostar al menos 1 gonzo\n");
     }
-
     if (verExisteJugador(idJugador) == false){
         throw std::domain_error("El jugador con la identificacion recibida NO existe, no es posible jugar\n");
     }
@@ -43,10 +44,15 @@ bool Casino::jugar(int idJuego, long idJugador, float gonzosApostar) {
     if (verPuedeContinuar(idJugador, gonzosApostar)== false){
         throw std::domain_error("No tienes saldo suficiente para jugar\n");
     }
+    posJuego = idJuego - 1;
+    Juego * pJuegoAJugar = juegosDisponibles.at(idJuego-1);
+    Jugador * pJugador = jugadoresMap[idJugador];
+    gonzosGanados = pJuegoAJugar->jugar(gonzosApostar) - gonzosApostar;
+    pJugador->actualizarGonzos(gonzosGanados);
+    pJugador->aumentarJuegos();
 
-    throw std::logic_error("Metodo incompleto");
     // Retorna verdadero si el jugador ganó y false si el jugador perdio
-    return false;
+    return(gonzosGanados >= 0);
 }
 
 void Casino::verInfoJugador(long idJugador){

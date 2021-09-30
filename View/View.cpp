@@ -32,9 +32,24 @@ void View::agregarJugador()
 }
 
 void View::jugarView(){
+    long idJugador;
+    float cantGonzos;
+    int juego;
+    bool resultado;
     try {
-        throw std::logic_error("Metodo por implementar");
-
+        cout << "Ingrese el id del jugador que va jugar: ";
+        cin >> idJugador;
+        cout << "Cuantos gonzos va a apostar: ";
+        cin >> cantGonzos;
+        cout << "Juegos:\n" << "1. Dos Colores\n" << "2. Mayor 13\n" << "3. Genshin\n" << "Opcion: ";
+        cin >> juego;
+        resultado = casino.jugar(juego, idJugador, cantGonzos);
+        if (resultado){
+            cout << "Ganaste\n";
+        }
+        else{
+            cout << "Perdiste\n";
+        }
     }catch (std::domain_error ex){
         // Se muestran los mensajes de excepcion obtenidos
         cout << ex.what();
